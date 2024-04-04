@@ -21,10 +21,7 @@ def reveal_cell(board, row, col):
         return True
 
 def check_win(board):
-    for row in board:
-        if '?' in row:
-            return False
-    return True
+    return all('?' not in row for row in board)
 
 def play_game():
     print("Welcome to Minesweeper!")
